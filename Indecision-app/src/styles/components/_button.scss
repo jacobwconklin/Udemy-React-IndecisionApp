@@ -1,0 +1,39 @@
+// big ole button
+.bigButton {
+    background: $purple;
+    border: none;
+    border-bottom: .6rem solid darken($purple, 10%) ; // 3 values width, type of border, and color of border
+    // Darken function takes in a value like a JS function and returns a darkened color
+    // it takes two arguments, the color to darken and the percent to darken it by
+    // there are more sass built in functiosn just google sass functions. 
+    color: white;
+    font-weight: bold;
+    font-size: $l-size;
+    // Adding size / spacing
+    width: 100%;
+    margin-bottom: $xl-size;
+    padding: 2.4rem;
+}
+
+.bigButton:disabled { // Selects bigbutton only when it's disabled!
+    // Set disables status to look faded 
+    opacity: 0.5;
+}
+
+// Styles for smaller buttons
+.button {
+    background: $purple;
+    border: none;
+    border-bottom: 0.3rem, solid, darken($purple, 10%);
+    color: white;
+    font-weight: 500;
+    padding: $s-size;
+}
+
+// Using a modifier for the button element uses two --
+.button--link { // making a link looking button (link is just a name nothing special)
+    background: none;
+    border: none;
+    color: $off-white;
+    padding: 0;
+}

@@ -1,0 +1,47 @@
+// When using 3rd party stuff look at the element part of page inspect to see class names to modify
+.ReactModalPortal > div {
+    opacity: 0; // set initial opacity so it can fade in istead of instantly popping up
+}
+
+.ReactModalPortal .ReactModal__Overlay { // finds the overlay inside of the portal
+    transition: opacity 200ms ease-in-out; // define what you tradition, over how long, and what function to do it
+    // transitioning in is easier than transitioning out. 
+    display: flex;
+    justify-content: center; // center content
+    align-items: center; // flexbox related property
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open { 
+    opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close { 
+    opacity: 0;
+}
+
+.modal {
+    background: $light-blue;
+    text-align: center;
+    color: white;
+    // MaxWidth will make long options wrap
+    max-width: 30rem; // words don't break on default
+    outline: none;
+    padding: $l-size;
+}
+
+// Element selectors!!!!!
+.modal__title {
+    margin: 0 0 $m-size; // order goes top, right, bottom, left like cardinal directions
+}
+
+.modal__body {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0 0 $l-size 0;
+    word-break: break-all;
+}
+
+
+
+
+

@@ -1,0 +1,27 @@
+// A partial!
+// This selector targets the class header
+.header {
+    background: $off-black;
+    margin-bottom: $xl-size; // puts some space between header and things below it
+    color: white;
+    padding: $m-size 0 // This puts 1.6rem above and below, and 0 on the left and right
+    // scss has support for nested selectors
+    // h1 {
+    //     color: red; // makes h1 inside of a header red, pretty coolio
+    // }
+}
+
+// BEM naming convention = block element modifier
+// blocks are something big like the header, elements are smaller 
+// things like the title
+.header__title { // two underscores viu
+    font-size: $l-size;
+    margin: 0; // Sets margin on all 4 sides
+}
+
+.header__subtitle {
+    color: $off-white;
+    font-size: $m-size;
+    font-weight: 500;
+    margin: 0;
+}
